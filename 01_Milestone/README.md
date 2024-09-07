@@ -21,7 +21,7 @@ This project is a **interactive resume page** developed as part of **Milestone 1
 
 ## Live Link:
 
-
+[Static Resume Page](https://resume-builder-zeta-gray.vercel.app/)
 
 ## Installation
 
@@ -29,7 +29,7 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/hackathon-milestone1-resume.git
+   git clone https://github.com/Muhammad-Hassann/Resume_builder.git
 
    ```
 
