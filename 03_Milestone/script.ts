@@ -3,11 +3,11 @@ function toggleSection(sectionId: string): void {
   const toggleIcon = section.previousElementSibling?.querySelector('.toggle-icon');
 
   if (section.style.display === 'none') {
-    section.style.display = 'block'; // Show the section
-    toggleIcon!.textContent = '-'; // Change icon to minus when showing
+    section.style.display = 'block'; 
+    toggleIcon!.textContent = '-';
   } else {
-    section.style.display = 'none'; // Hide the section
-    toggleIcon!.textContent = '+'; // Change icon to plus when hiding
+    section.style.display = 'none'; 
+    toggleIcon!.textContent = '+'; 
   }
 }
 

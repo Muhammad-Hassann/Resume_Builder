@@ -106,7 +106,6 @@ button:hover {
   margin: 50px auto;
   border: 2px solid #333;
   border-radius: 10px;
-  /* overflow: hidden; */
   background-color: #1a1a1a;
   
 }
@@ -148,7 +147,7 @@ button:hover {
 .right-column {
   width: 60%;
   padding: 50px 40px;
-  flex-grow: 1; /* Let it take the remaining space */
+  flex-grow: 1; 
 }
 
 .section {
@@ -208,30 +207,30 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Ensure full width */
+    width: 100%; 
   }
 
   .form-section, .resume-section {
     width: 100%;
-    margin-bottom: 20px; /* Space between form and resume sections */
+    margin-bottom: 20px; 
   }
 
   .form-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Ensure form takes full width */
+    width: 100%; 
   }
 
   .container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the resume content */
+    align-items: center;
   }
 
   .left-column, .right-column {
     padding: 10px;
-    width: 100%; /* Take full width on smaller screens */
+    width: 100%;
   }
 
   h2 {
