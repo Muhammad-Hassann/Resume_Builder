@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <!-- Left column for form -->
+      <section class="form-section">
+        <h2>Resume Builder</h2>
+
+        <!-- Image Upload Form -->
+        <form id="image-form">
+          <h3>Profile Picture</h3>
+          <input type="file" id="image-input" accept="image/*" />
+          <button type="submit">Upload</button>
+        </form>
+
+        <!-- Personal Information Form -->
+        <form id="personal-info-form">
+          <h3>Personal Info</h3>
+          <input type="text" id="name-input" placeholder="Full Name" />
+          <input type="text" id="job-input" placeholder="Job Title" />
+          <input type="text" id="email-input" placeholder="Email" />
+          <input type="text" id="phone-input" placeholder="Phone" />
+          <input type="text" id="location-input" placeholder="Location" />
+          <button type="submit">Update Info</button>
+        </form>
+
+        <!-- Summary Form -->
+        <form id="summary-form">
+          <h3>Summary</h3>
+          <textarea
+            id="summary-input"
+            placeholder="Enter a brief summary"
+          ></textarea>
+          <button type="submit">Update Summary</button>
+        </form>
+
+        <!-- Skills Form -->
+        <form id="skills-form">
+          <h3>Skills</h3>
+          <textarea
+            id="skills-input"
+            placeholder="Enter skills (comma separated)"
+          ></textarea>
+          <button type="submit">Update Skills</button>
+        </form>
+
+        <!-- Experience Form -->
+        <form id="experience-form">
+          <h3>Experience</h3>
+          <textarea
+            id="experience-input"
+            placeholder="Enter experience"
+          ></textarea>
+          <button type="submit">Update Experience</button>
+        </form>
+
+        <!-- Education Form -->
+        <form id="education-form">
+          <h3>Education</h3>
+          <textarea
+            id="education-input"
+            placeholder="Enter education"
+          ></textarea>
+          <button type="submit">Update Education</button>
+        </form>
+      </section>
+
+      <!-- Right Section for resume preview -->
+      <div class="container">
+        <section class="resume-section">
+          <!-- Left Column -->
+          <div class="left-column">
+            <div class="profile-picture">
+              <img
+                id="profile-picture"
+                src="./images/avatar.png"
+                alt="Profile Picture"
+              />
+            </div>
+            <div class="personal-info">
+              <h2 id="name">John Doe</h2>
+              <p id="job">Web Developer</p>
+              <p id="email">john.doe@example.com</p>
+              <p id="phone">+123 456 7890</p>
+              <p id="location">New York, USA</p>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="right-column">
+            <!-- Summary Section -->
+            <div class="section" id="summary-section">
+              <h3>Summary
+                <span
+                  class="toggle-icon"
+                  onclick="toggleSection('summary-content')"
+                  >-</span
+                >
+              </h3>
+              <div id="summary-content">
+              <p id="summary">
+                A highly motivated web developer with experience in creating
+                dynamic and responsive web applications.
+              </p>
+            </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="section" id="skills-section">
+              <h3>
+                Skills
+                <span
+                  class="toggle-icon"
+                  onclick="toggleSection('skills-content')"
+                  >-</span
+                >
+              </h3>
+              <div id="skills-content">
+                <ul>
+                  <li>JavaScript</li>
+                  <li>React.js</li>
+                  <li>TypeScript</li>
+                  <li>HTML & CSS</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="section" id="education-section">
+              <h3>
+                Education
+                <span
+                  class="toggle-icon"
+                  onclick="toggleSection('education-content')"
+                  >-</span
+                >
+              </h3>
+              <div id="education-content">
+                <p>B.Sc. in Computer Science - XYZ University (2015 - 2019)</p>
+              </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="section" id="experience-section">
+              <h3>
+                Experience
+                <span
+                  class="toggle-icon"
+                  onclick="toggleSection('experience-content')"
+                  >-</span
+                >
+              </h3>
+              <div id="experience-content">
+                <p>Software Engineer at ABC Company (2020 - Present)</p>
+                <p>Frontend Developer at DEF Inc. (2019 - 2020)</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
