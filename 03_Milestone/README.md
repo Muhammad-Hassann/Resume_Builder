@@ -21,16 +21,10 @@ The **Dynamic Resume Builder** is an interactive web application that allows use
 - **TypeScript**: Dynamic functionality and form handling.
 - **Media Queries**: For responsive design, making the layout adapt to different screen sizes.
 
-## How to Use
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/dynamic-resume-builder.git
-
 
 ## Live Link:
 
-[Static Resume Page](https://resume-builder-zeta-gray.vercel.app/)
+[Dynamic Resume Builder](https://dynamic-resume-builder-omega.vercel.app/)
 
 ## Installation
 
