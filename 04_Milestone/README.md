@@ -22,7 +22,7 @@ I update the milestone 3 and add edit feature in it. This project allows users t
 
 ## Live Link:
 
-[Editable Resume Builder](https://dynamic-resume-builder-omega.vercel.app/)
+[Editable Resume Builder](https://editable-resume-builder-eight.vercel.app/)
 
 ## Installation
 
