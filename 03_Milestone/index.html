@@ -50,16 +50,6 @@
           <button type="submit">Update Skills</button>
         </form>
 
-        <!-- Experience Form -->
-        <form id="experience-form">
-          <h3>Experience</h3>
-          <textarea
-            id="experience-input"
-            placeholder="Enter experience"
-          ></textarea>
-          <button type="submit">Update Experience</button>
-        </form>
-
         <!-- Education Form -->
         <form id="education-form">
           <h3>Education</h3>
@@ -69,6 +59,17 @@
           ></textarea>
           <button type="submit">Update Education</button>
         </form>
+
+        <!-- Experience Form -->
+        <form id="experience-form">
+          <h3>Experience</h3>
+          <textarea
+            id="experience-input"
+            placeholder="Enter experience"
+          ></textarea>
+          <button type="submit">Update Experience</button>
+        </form>
+        
       </section>
 
       <!-- Right Section for resume preview -->
@@ -117,11 +118,11 @@
                 Skills
                 <span
                   class="toggle-icon"
-                  onclick="toggleSection('skills-content')"
+                  onclick="toggleSection('skills-list')"
                   >-</span
                 >
               </h3>
-              <div id="skills-content">
+              <div id="skills-list">
                 <ul>
                   <li>JavaScript</li>
                   <li>React.js</li>
@@ -137,11 +138,11 @@
                 Education
                 <span
                   class="toggle-icon"
-                  onclick="toggleSection('education-content')"
+                  onclick="toggleSection('education')"
                   >-</span
                 >
               </h3>
-              <div id="education-content">
+              <div id="education">
                 <p>B.Sc. in Computer Science - XYZ University (2015 - 2019)</p>
               </div>
             </div>
@@ -152,11 +153,11 @@
                 Experience
                 <span
                   class="toggle-icon"
-                  onclick="toggleSection('experience-content')"
+                  onclick="toggleSection('experience')"
                   >-</span
                 >
               </h3>
-              <div id="experience-content">
+              <div id="experience">
                 <p>Software Engineer at ABC Company (2020 - Present)</p>
                 <p>Frontend Developer at DEF Inc. (2019 - 2020)</p>
               </div>
