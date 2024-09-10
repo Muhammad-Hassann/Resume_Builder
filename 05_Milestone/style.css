@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f0f0;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+/* Form Section */
+
+.form-section {
+  width: 40%;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #1a1a1a;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid transparent; /* Initially no border */
+  position: relative;
+}
+
+.active-section {
+  border: 2px solid #333; /* Highlighted border for active section */
+  border-radius: 10px;
+  background-color: rgba(0, 188, 212, 0.1); 
+}
+
+
+/* .edit-btn:hover {
+  background-color: #008c9e;
+} */
+
+
+.form-section h2 {
+  text-align: center;
+  color: #ECDFCC;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+form {
+  width: 100%;
+  max-width: 500px; 
+  margin: 0 auto;
+}
+
+input, textarea {
+  width: 100%; 
+  box-sizing: border-box; 
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #555;
+  color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+}
+
+button {
+  width: 10rem;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #697565;
+  font-size: .9rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+button:hover {
+  background-color: #7f837e;
+}
+
+/* Right Column Styling */
+.right-column {
+  width: 65%;
+  padding: 20px;
+}
+
+.profile-picture img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #666;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+
+/* Resume Section */
+
+.container {
+  width: 100%;
+}
+
+.button-container {
+  width: 100%;
+  /* background-color: #333; */
+  display: flex;
+  justify-content: flex-end; 
+  gap: 2rem;
+  padding: 10px 0px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+  margin-bottom: 20px; 
+}
+
+.button-container button {
+  color: white; 
+  background-color: #697565;
+  border: none;
+  padding: 10px 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-container button:nth-child(2) {
+  margin-right: 40px;
+}
+
+.button-container button:hover {
+  background-color: #7f837e; /* Hover effect */
+}
+
+
+.resume-section {
+  display: flex;
+  width: 70%;
+  margin: 50px auto;
+  border: 2px solid #333;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  background-color: #1a1a1a;
+  
+}
+
+.left-column, .right-column {
+  padding: 20px;
+}
+
+/* Left column styling */
+.left-column {
+  background-color: #333;
+  width: 40%;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.left-column p {
+  line-height: 2;
+}
+
+.left-column h2 {
+  margin-bottom: 10px;
+}
+
+.profile-picture img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #666;
+}
+
+.personal-info {
+  margin-top: 20px;
+  padding: 20px 0px;
+}
+.active-personal {
+  border: 2px solid #1a1a1a; /* Highlighted border for active section */
+  border-radius: 10px;
+  background-color: rgba(0, 188, 212, 0.1); 
+}
+
+.personal-info .btn-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Right column styling */
+.right-column {
+  width: 60%;
+  padding: 50px 40px;
+  flex-grow: 1; 
+}
+
+.edit-btn {
+  background-color: #697565;
+  width: 5rem;
+  padding: 10px;
+  color: white;
+  border: none;
+  font-size: .9rem;
+  cursor: pointer;
+  display: none;
+}
+
+.edit-btn:hover {
+  background-color: #7f837e;
+}
+
+
+.section {
+  margin-bottom: 60px;
+}
+
+.right-column h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f0f0f0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.right-column li {
+  line-height: 1.5;
+  margin-left: 35px;
+}
+
+.right-column p {
+  padding-left: 20px;
+  line-height: 1.5;
+}
+
+.toggle-icon {
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: #f0f0f0;
+  margin-left: 10px;
+}
+
+.content {
+  margin-top: 10px;
+}
+
+
+/* For hiding sections */
+.hidden {
+  display: none;
+}
+
+/* Media Queries */
+
+/* Media query for devices with max-width of 900px */
+@media (max-width: 1100px) {
+  .resume-section {
+    width: 100%;
+  }
+}
+
+/* Media query for devices with max-width of 600px */
+@media (max-width: 600px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+  }
+
+  .form-section, .resume-section {
+    width: 100%;
+    /* margin-bottom: 20px; Space between form and resume sections */
+  }
+
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure form takes full width */
+  }
+
+  .button-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .button-container button:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the resume content */
+  }
+  .resume-section {
+    width: 100%;
+  }
+
+  .left-column, .right-column {
+    padding: 10px;
+    width: 100%; 
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .toggle-icon {
+    font-size: 18px; 
+  }
+
+
+/* Media query for devices with max-width of 400px */
+@media (max-width: 400px) {
+  .profile-picture img {
+    width: 120px; 
+    height: 120px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .social-links h3 {
+    font-size: 18px;
+  }
+
+  .social-links li {
+    margin: 3px 0;
+  }
+}
+}
