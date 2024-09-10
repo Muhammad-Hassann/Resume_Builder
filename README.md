@@ -8,10 +8,10 @@ The Dynamic Resume Builder is an interactive web application designed to help us
 
 - [Milestones](#milestones)
 - [Technologies Used](#technologies-used)
+- [Live Link](#live-link)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Milestones
 
@@ -48,6 +48,9 @@ The Dynamic Resume Builder is an interactive web application designed to help us
 - Vercel (for deployment)
 - GitHub (for version control)
 
+## Live Link
+
+
 ## Installation
 
 To run this project locally, follow these steps:
@@ -60,8 +63,22 @@ To run this project locally, follow these steps:
 
 2. Navigate to the project directory:
 ```bash
-cd 01_Milestone
+cd Resume_builder
 
 ```
 
 3. Open the index.html file in your preferred web browser
+
+
+## Usage
+
+- Fill in the forms to input your personal information, skills, experience, education, and summary.
+- Click the corresponding buttons to update each section of the resume.
+- Use the edit buttons to modify any section of your resume.
+- Click the "Copy Shareable Link" button to copy the unique link for your resume.
+- Download your resume as a PDF using the download button.
+
+## Contributing
+
+**Contributions are welcome! If you'd like to contribute, please fork the repository and create a pull request.**
+
