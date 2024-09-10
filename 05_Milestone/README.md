@@ -28,7 +28,7 @@ This project is an **Interactive Resume Builder** using HTML, CSS, and TypeScrip
 
 ## **Live Link**
 
-[Dynamic Resume Builder](https://dynamic-resume-builder-omega.vercel.app/)
+[Dynamic Resume Builder](https://resume-builder-7us2.vercel.app/)
 
 ## **Installation**
 
