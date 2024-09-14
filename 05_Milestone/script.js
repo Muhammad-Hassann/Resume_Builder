@@ -1,29 +1,31 @@
 function generateUniqueLink() {
-    const name = document.getElementById('name')?.innerText || 'User';
-    const baseUrl = window.location.origin; // Get the base URL of the current site
-    const formattedName = name.replace(/\s+/g, '-').toLowerCase(); // Format name for URL
-    return `${baseUrl}/resume/${formattedName}`; // Create a unique link
+    const name = document.getElementById("name")?.innerText || "User";
+    const baseUrl = window.location.origin;
+    const formattedName = name.replace(/\s+/g, "-").toLowerCase();
+    return `${baseUrl}/resume/${formattedName}`;
 }
-document.getElementById('copy-link-btn')?.addEventListener('click', () => {
+document.getElementById("copy-link-btn")?.addEventListener("click", () => {
     const uniqueLink = generateUniqueLink();
-    navigator.clipboard.writeText(uniqueLink).then(() => {
-        alert('Shareable link copied to clipboard!');
-    }).catch(err => {
-        console.error('Failed to copy: ', err);
+    navigator.clipboard
+        .writeText(uniqueLink)
+        .then(() => {
+        alert("Shareable link copied to clipboard!");
+    })
+        .catch((err) => {
+        console.error("Failed to copy: ", err);
     });
 });
 // Download Resume as PDF
-document.querySelector('#download-btn')?.addEventListener('click', function () {
-    const resumeElement = document.getElementById('resume');
+document.querySelector("#download-btn")?.addEventListener("click", function () {
+    const resumeElement = document.getElementById("resume");
     if (resumeElement) {
         const opt = {
             margin: [0, 1],
-            filename: 'resume.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
+            filename: "resume.pdf",
+            image: { type: "jpeg", quality: 0.98 },
             html2canvas: { scale: 2 },
-            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
         };
-        // New Promise-based usage:
         html2pdf().from(resumeElement).set(opt).save();
     }
     else {
@@ -46,7 +48,7 @@ personalInfo.addEventListener("mouseout", () => {
 const sections = document.querySelectorAll(".section");
 let activeSection = null;
 sections.forEach((section) => {
-    section.addEventListener("mouseenter", () => {
+    section.addEventListener("mouseover", () => {
         if (activeSection !== section) {
             if (activeSection) {
                 activeSection.classList.remove("active-section");
@@ -59,7 +61,7 @@ sections.forEach((section) => {
             activeSection = section;
         }
     });
-    section.addEventListener("mouseleave", () => {
+    section.addEventListener("mouseout", () => {
         if (activeSection === section) {
             section.classList.remove("active-section");
             const editBtn = section.querySelector(".edit-btn");
@@ -71,63 +73,63 @@ sections.forEach((section) => {
 function editSection(section) {
     let inputField;
     switch (section) {
-        case 'personal':
-            inputField = document.getElementById('name-input');
+        case "personal":
+            inputField = document.getElementById("name-input");
             if (inputField) {
-                inputField.value = document.getElementById('name').innerText;
+                inputField.value = document.getElementById("name").innerText;
                 inputField.focus();
             }
-            inputField = document.getElementById('job-input');
+            inputField = document.getElementById("job-input");
             if (inputField) {
-                inputField.value = document.getElementById('job').innerText;
+                inputField.value = document.getElementById("job").innerText;
                 inputField.focus();
             }
-            inputField = document.getElementById('email-input');
+            inputField = document.getElementById("email-input");
             if (inputField) {
-                inputField.value = document.getElementById('email').innerText;
+                inputField.value = document.getElementById("email").innerText;
                 inputField.focus();
             }
-            inputField = document.getElementById('phone-input');
+            inputField = document.getElementById("phone-input");
             if (inputField) {
-                inputField.value = document.getElementById('phone').innerText;
+                inputField.value = document.getElementById("phone").innerText;
                 inputField.focus();
             }
-            inputField = document.getElementById('location-input');
+            inputField = document.getElementById("location-input");
             if (inputField) {
-                inputField.value = document.getElementById('location').innerText;
-                inputField.focus();
-            }
-            break;
-        case 'summary':
-            inputField = document.getElementById('summary-input');
-            if (inputField) {
-                inputField.value = document.getElementById('summary').innerText;
+                inputField.value = document.getElementById("location").innerText;
                 inputField.focus();
             }
             break;
-        case 'skills':
-            inputField = document.getElementById('skills-input');
+        case "summary":
+            inputField = document.getElementById("summary-input");
             if (inputField) {
-                const skills = Array.from(document.querySelectorAll('#skills-content li'))
+                inputField.value = document.getElementById("summary").innerText;
+                inputField.focus();
+            }
+            break;
+        case "skills":
+            inputField = document.getElementById("skills-input");
+            if (inputField) {
+                const skills = Array.from(document.querySelectorAll("#skills-content li"))
                     .map((li) => li.innerText)
-                    .join(', ');
+                    .join(", ");
                 inputField.value = skills;
                 inputField.focus();
             }
             break;
-        case 'education':
-            inputField = document.getElementById('education-input');
+        case "education":
+            inputField = document.getElementById("education-input");
             if (inputField) {
-                inputField.value = document.getElementById('education').innerText;
+                inputField.value = document.getElementById("education").innerText;
                 inputField.focus();
             }
             break;
-        case 'experience':
-            inputField = document.getElementById('experience-input');
+        case "experience":
+            inputField = document.getElementById("experience-input");
             if (inputField) {
-                const experiences = Array.from(document.querySelectorAll('#experience-content p'))
+                const experiences = Array.from(document.querySelectorAll("#experience-content p"))
                     .map((p) => p.innerText)
-                    .join('\n');
+                    .join("\n");
                 inputField.value = experiences;
                 inputField.focus();
             }
@@ -137,9 +139,9 @@ function editSection(section) {
     }
 }
 // Profile Picture Upload and Display
-const imageInput = document.getElementById('image-input');
-const profilePicture = document.getElementById('profile-picture');
-document.getElementById('image-form')?.addEventListener('submit', (event) => {
+const imageInput = document.getElementById("image-input");
+const profilePicture = document.getElementById("profile-picture");
+document.getElementById("image-form")?.addEventListener("submit", (event) => {
     event.preventDefault();
     const file = imageInput.files ? imageInput.files[0] : null;
     if (file) {
@@ -151,54 +153,76 @@ document.getElementById('image-form')?.addEventListener('submit', (event) => {
     }
 });
 // Personal Info Update
-const nameInput = document.getElementById('name-input');
-const jobInput = document.getElementById('job-input');
-const emailInput = document.getElementById('email-input');
-const phoneInput = document.getElementById('phone-input');
-const locationInput = document.getElementById('location-input');
-document.getElementById('personal-info-form')?.addEventListener('submit', (event) => {
+const nameInput = document.getElementById("name-input");
+const jobInput = document.getElementById("job-input");
+const emailInput = document.getElementById("email-input");
+const phoneInput = document.getElementById("phone-input");
+const locationInput = document.getElementById("location-input");
+document
+    .getElementById("personal-info-form")
+    ?.addEventListener("submit", (event) => {
     event.preventDefault();
-    document.getElementById('name').textContent = nameInput.value || 'John Doe';
-    document.getElementById('job').textContent = jobInput.value || 'Web Developer';
-    document.getElementById('email').textContent = emailInput.value || 'john.doe@example.com';
-    document.getElementById('phone').textContent = phoneInput.value || '+123 456 7890';
-    document.getElementById('location').textContent = locationInput.value || 'New York, USA';
+    document.getElementById("name").textContent =
+        nameInput.value || "John Doe";
+    document.getElementById("job").textContent =
+        jobInput.value || "Web Developer";
+    document.getElementById("email").textContent =
+        emailInput.value || "john.doe@example.com";
+    document.getElementById("phone").textContent =
+        phoneInput.value || "+123 456 7890";
+    document.getElementById("location").textContent =
+        locationInput.value || "New York, USA";
+    nameInput.value = "";
+    jobInput.value = "";
+    emailInput.value = "";
+    phoneInput.value = "";
+    locationInput.value = "";
 });
 // Summary Update
-const summaryInput = document.getElementById('summary-input');
-const summaryDisplay = document.getElementById('summary-content');
-document.getElementById('summary-form')?.addEventListener('submit', (event) => {
+const summaryInput = document.getElementById("summary-input");
+const summaryDisplay = document.getElementById("summary-content");
+document.getElementById("summary-form")?.addEventListener("submit", (event) => {
     event.preventDefault();
-    summaryDisplay.textContent = summaryInput.value || 'A highly motivated web developer with experience in creating dynamic and responsive web applications.';
-    summaryInput.value = '';
+    summaryDisplay.textContent =
+        summaryInput.value ||
+            "A highly motivated web developer with experience in creating dynamic and responsive web applications.";
+    summaryInput.value = "";
 });
 // Skills Update
-const skillsInput = document.getElementById('skills-input');
-const skillsList = document.getElementById('skills-content');
-document.getElementById('skills-form')?.addEventListener('submit', (event) => {
+const skillsInput = document.getElementById("skills-input");
+const skillsList = document.getElementById("skills-content");
+document.getElementById("skills-form")?.addEventListener("submit", (event) => {
     event.preventDefault();
-    const skillsArray = skillsInput.value.split(',').map(skill => skill.trim());
-    skillsList.innerHTML = '';
-    skillsArray.forEach(skill => {
-        const li = document.createElement('li');
+    const skillsArray = skillsInput.value.split(",").map((skill) => skill.trim());
+    skillsList.innerHTML = "";
+    skillsArray.forEach((skill) => {
+        const li = document.createElement("li");
         li.textContent = skill;
         skillsList.appendChild(li);
     });
-    skillsInput.value = '';
+    skillsInput.value = "";
 });
 // Experience Update
-const experienceInput = document.getElementById('experience-input');
-const experienceDisplay = document.getElementById('experience-content');
-document.getElementById('experience-form')?.addEventListener('submit', (event) => {
+const experienceInput = document.getElementById("experience-input");
+const experienceDisplay = document.getElementById("experience-content");
+document
+    .getElementById("experience-form")
+    ?.addEventListener("submit", (event) => {
     event.preventDefault();
-    experienceDisplay.textContent = experienceInput.value || 'Software Engineer at ABC Company (2020 - Present)';
-    experienceInput.value = '';
+    experienceDisplay.textContent =
+        experienceInput.value ||
+            "Software Engineer at ABC Company (2020 - Present)";
+    experienceInput.value = "";
 });
 // Education Update
-const educationInput = document.getElementById('education-input');
-const educationDisplay = document.getElementById('education-content');
-document.getElementById('education-form')?.addEventListener('submit', (event) => {
+const educationInput = document.getElementById("education-input");
+const educationDisplay = document.getElementById("education-content");
+document
+    .getElementById("education-form")
+    ?.addEventListener("submit", (event) => {
     event.preventDefault();
-    educationDisplay.textContent = educationInput.value || 'B.Sc. in Computer Science - XYZ University (2015 - 2019)';
-    educationInput.value = '';
+    educationDisplay.textContent =
+        educationInput.value ||
+            "B.Sc. in Computer Science - XYZ University (2015 - 2019)";
+    educationInput.value = "";
 });
