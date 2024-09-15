@@ -20,7 +20,7 @@ document.querySelector("#download-btn")?.addEventListener("click", function () {
     const resumeElement = document.getElementById("resume");
     if (resumeElement) {
         const opt = {
-            margin: [0, 1],
+            margin: 0,
             filename: "resume.pdf",
             image: { type: "jpeg", quality: 0.98 },
             html2canvas: { scale: 2 },
